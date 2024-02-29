@@ -159,7 +159,7 @@ public class ProductDao {
 				e.printStackTrace();
 			}
 		}
-	/*
+	
 public static void deleteproduct(int pid) {
 		
 		try {
@@ -175,6 +175,7 @@ public static void deleteproduct(int pid) {
 				e.printStackTrace();
 			}
 		}
+
 
 
 public static List<ProductBean> ShowonShop(){
@@ -195,9 +196,18 @@ public static List<ProductBean> ShowonShop(){
 			p.setUid(rst.getInt("uid"));
 			p.setProduct_category(rst.getString("product_category"));
 			p.setProduct_name(rst.getString("product_name"));
-			p.setProduct_price(rst.getInt("product_price"));
-			p.setProduct_details(rst.getString("product_details"));
+			p.setProduct_price(rst.getString("product_price"));
+			p.setProduct_desc(rst.getString("product_desc"));
 		    p.setProduct_image(rst.getString("product_image"));
+		    
+		    p.setProduct_deposit(rst.getString("product_deposit"));
+			p.setProduct_weight(rst.getString("product_weight"));
+			p.setSeller_number(rst.getString("seller_number"));
+		    p.setProduct_material(rst.getString("product_material"));
+		    
+		    p.setProduct_location(rst.getString("product_location"));
+			p.setProduct_color(rst.getString("product_color"));
+			p.setProduct_size(rst.getString("product_size"));
 		    list.add(p);
 		    
 		}
@@ -208,9 +218,13 @@ public static List<ProductBean> ShowonShop(){
 	
 	return list;
 	}
- public static List<ProductBean> ShowAllVegetables(){
+
+
+
+
+ public static List<ProductBean> ShowAllElectronics(){
 	
-	String product_category="vegetables";
+	String product_category="electronics";
 	List<ProductBean> list=new ArrayList<>();
        	
 	try {
@@ -228,9 +242,62 @@ public static List<ProductBean> ShowonShop(){
 			p.setUid(rst.getInt("uid"));
 			p.setProduct_category(rst.getString("product_category"));
 			p.setProduct_name(rst.getString("product_name"));
-			p.setProduct_price(rst.getInt("product_price"));
-			p.setProduct_details(rst.getString("product_details"));
+			p.setProduct_price(rst.getString("product_price"));
+			p.setProduct_desc(rst.getString("product_desc"));
 		    p.setProduct_image(rst.getString("product_image"));
+		    
+		    p.setProduct_deposit(rst.getString("product_deposit"));
+			p.setProduct_weight(rst.getString("product_weight"));
+			p.setSeller_number(rst.getString("seller_number"));
+		    p.setProduct_material(rst.getString("product_material"));
+		    
+		    p.setProduct_location(rst.getString("product_location"));
+			p.setProduct_color(rst.getString("product_color"));
+			p.setProduct_size(rst.getString("product_size"));
+		    list.add(p);
+		    
+		}
+		
+		
+	} catch (Exception e) {
+	}
+	
+	return list;
+	}
+ 
+
+ public static List<ProductBean> ShowAllClothes(){
+	
+	String product_category="clothes";
+	List<ProductBean> list=new ArrayList<>();
+       	
+	try {
+		Connection conn=UserUtil.CreateConnection();
+		String sql="select * from product where product_category=?";
+		PreparedStatement pst=conn.prepareStatement(sql);
+		pst.setString(1, product_category);
+		ResultSet rst=pst.executeQuery();
+		
+		while(rst.next()) {
+			
+			ProductBean p=new ProductBean();
+			
+			p.setPid(rst.getInt("pid"));
+			p.setUid(rst.getInt("uid"));
+			p.setProduct_category(rst.getString("product_category"));
+			p.setProduct_name(rst.getString("product_name"));
+			p.setProduct_price(rst.getString("product_price"));
+			p.setProduct_desc(rst.getString("product_desc"));
+		    p.setProduct_image(rst.getString("product_image"));
+		    
+		    p.setProduct_deposit(rst.getString("product_deposit"));
+			p.setProduct_weight(rst.getString("product_weight"));
+			p.setSeller_number(rst.getString("seller_number"));
+		    p.setProduct_material(rst.getString("product_material"));
+		    
+		    p.setProduct_location(rst.getString("product_location"));
+			p.setProduct_color(rst.getString("product_color"));
+			p.setProduct_size(rst.getString("product_size"));
 		    list.add(p);
 		    
 		}
@@ -243,9 +310,10 @@ public static List<ProductBean> ShowonShop(){
 	}
 	
  
- public static List<ProductBean> ShowAllFruits(){
+  
+ public static List<ProductBean> ShowAllTools(){
 		
-		String product_category="fruits";
+		String product_category="tools";
 		List<ProductBean> list=new ArrayList<>();
 	       	
 		try {
@@ -263,9 +331,18 @@ public static List<ProductBean> ShowonShop(){
 				p.setUid(rst.getInt("uid"));
 				p.setProduct_category(rst.getString("product_category"));
 				p.setProduct_name(rst.getString("product_name"));
-				p.setProduct_price(rst.getInt("product_price"));
-				p.setProduct_details(rst.getString("product_details"));
+				p.setProduct_price(rst.getString("product_price"));
+				p.setProduct_desc(rst.getString("product_desc"));
 			    p.setProduct_image(rst.getString("product_image"));
+			    
+			    p.setProduct_deposit(rst.getString("product_deposit"));
+				p.setProduct_weight(rst.getString("product_weight"));
+				p.setSeller_number(rst.getString("seller_number"));
+			    p.setProduct_material(rst.getString("product_material"));
+			    
+			    p.setProduct_location(rst.getString("product_location"));
+				p.setProduct_color(rst.getString("product_color"));
+				p.setProduct_size(rst.getString("product_size"));
 			    list.add(p);
 			    
 			}
@@ -276,7 +353,7 @@ public static List<ProductBean> ShowonShop(){
 		
 		return list;
 		}
-                  */
+                 
 }
 	
 

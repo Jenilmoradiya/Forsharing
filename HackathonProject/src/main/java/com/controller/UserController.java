@@ -17,8 +17,9 @@ import javax.swing.Action;
 
 
 import com.bean.UserBean;
-
+import com.bean.wishlistBean;
 import com.dao.UserDao;
+import com.dao.WishlistDao;
 import com.service.Services;
 
 @WebServlet("/UserController")
@@ -77,6 +78,8 @@ else if(action.equalsIgnoreCase("login")) {
 				if(u.getUsertype().equals("buyer")) {
 				HttpSession session=request.getSession();
 				session.setAttribute("u", u);
+				List<wishlistBean> list=WishlistDao.DisplaytoWishlist(u.getUid());
+				session.setAttribute("wishlist_count", list.size());
 				request.getRequestDispatcher("index.jsp").forward(request, response); 				
 				}
 				else {

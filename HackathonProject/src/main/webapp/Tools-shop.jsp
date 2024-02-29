@@ -83,7 +83,7 @@
             
             <div class="row mb-5">
   <%
-                List<ProductBean> list=ProductDao.ShowonShop();
+                List<ProductBean> list=ProductDao.ShowAllTools();
 
                 for(ProductBean p: list){
             

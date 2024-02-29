@@ -1,3 +1,5 @@
+<%@page import="com.dao.WishlistDao"%>
+<%@page import="com.bean.wishlistBean"%>
 <%@page import="com.dao.ProductDao"%>
 <%@page import="com.bean.ProductBean"%>
 <%@page import="java.util.List"%>
@@ -39,57 +41,28 @@
         <div class="row mb-5">
           <div class="col-md-12 order-1">
 
-           
             
-            
-            
-            <div class="site-section">
-      <div class="container">
-        <div class="title-section mb-5">
-          <h2 class="text-uppercase"><span class="d-block">Discover</span> The Collections</h2>
-        </div>
-        <div class="row align-items-stretch">
-          <div class="col-lg-8">
-            <div class="product-item sm-height full-height bg-gray">
-              <a href="Electronics-shop.jsp" class="product-category">Electronics<span>items</span></a>
-              <img src="images/model_4.png" alt="Image" class="img-fluid">
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="product-item sm-height bg-gray mb-4">
-              <a href="Clothes-shop.jsp" class="product-category">Clothes <span>25 items</span></a>
-              <img src="images/model_5.png" alt="Image" class="img-fluid">
-            </div>
-
-            <div class="product-item sm-height bg-gray">
-              <a href="Tools-shop.jsp" class="product-category">Tools <span>25 items</span></a>
-              <img src="images/model_6.png" alt="Image" class="img-fluid">
-            </div>
-            
-            
-          </div>
-        </div>
-      </div>
-    </div>
-    
-             <div class="row align">
-              <div class="col-md-12 mb-5">
-                <div class="float-md-left"><h2 class="text-black h5">Shop All</h2></div>
-               
-              </div>
-            </div>
-            
-            
-            
+            <%
+                          if(request.getAttribute("msg")!=null){
+                         	 
+                         	   out.println(request.getAttribute("msg"));
+                          } 
+                     %>          
             <div class="row mb-5">
   <%
-                List<ProductBean> list=ProductDao.ShowonShop();
-
-                for(ProductBean p: list){
+                 List<wishlistBean> list=WishlistDao.DisplaytoWishlist(u.getUid());
+ 
+                  for(wishlistBean w:list)
+                  {
+	 
+	             ProductBean p=ProductDao.productinfo(w.getPid());
             
             %>
+
+         
+         <div class="col-lg-4 col-md-6 item-entry mb-4">
+
           
-          <div class="col-lg-4 col-md-6 item-entry mb-4">
             <a href="shop-details.jsp?pid=<%=p.getPid()%>" class="product-item md-height bg-gray d-block">
               <img src="product_image/<%=p.getProduct_image()%>" alt="Image" class="img-fluid">
             </a>

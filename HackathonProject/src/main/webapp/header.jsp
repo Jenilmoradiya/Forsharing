@@ -75,11 +75,10 @@
           </div>
           <div class="icons">
             <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
-            <a href="#" class="icons-btn d-inline-block"><span class="icon-heart-o"></span></a>
-            <a href="cart.jsp" class="icons-btn d-inline-block bag">
-              <span class="icon-shopping-bag"></span>
-              <span class="number">2</span>
-            </a>
+           
+           
+              
+            
             
             
              
@@ -91,7 +90,7 @@
                                 				u=(UserBean)session.getAttribute("u");
                                 
                              %> 
-                        
+                           <a href="Wishlist-grid.jsp" class="icons-btn d-inline-block"><span class="icon-heart-o"><%=session.getAttribute("wishlist_count") %></span></a>
                             
                              <a style="padding:10px; margin-left:20px" href="changePassword.jsp">change password</a>
                              <a  href="logout.jsp">Logout</a>
