@@ -929,7 +929,7 @@ a {
     transform: translateX(-50%);
     -o-object-fit: cover;
     object-fit: cover;
-    max-width: 300px;
+   /*  max-width: 300px; */
     position: absolute; }
 
 .item-entry .product-item {

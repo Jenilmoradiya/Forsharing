@@ -70,9 +70,12 @@ public class ProductController extends HttpServlet {
 	        p.setProduct_desc(request.getParameter("product_desc"));
 	        p.setProduct_image(fileName);
 	        p.setProduct_deposit(request.getParameter("product_deposit"));
+	        p.setProduct_day(request.getParameter("product_day"));
+	        p.setProduct_originalprice(request.getParameter("product_originalprice"));
 	        p.setProduct_weight(request.getParameter("product_weight"));
 	        p.setProduct_material(request.getParameter("product_material"));
 	        p.setProduct_location(request.getParameter("product_location"));
+	        p.setProduct_locationurl(request.getParameter("product_locationurl"));
 	        p.setProduct_color(request.getParameter("product_color"));
 	        p.setSeller_number(request.getParameter("seller_number"));
 	        p.setProduct_size(request.getParameter("product_size"));
@@ -95,9 +98,12 @@ public class ProductController extends HttpServlet {
 	        p.setProduct_price(request.getParameter("product_price"));
 	        p.setProduct_desc(request.getParameter("product_desc"));
 	        p.setProduct_deposit(request.getParameter("product_deposit"));
+	        p.setProduct_day(request.getParameter("product_day"));
+	        p.setProduct_originalprice(request.getParameter("product_originalprice"));
 	        p.setProduct_weight(request.getParameter("product_weight"));
 	        p.setProduct_material(request.getParameter("product_material"));
 	        p.setProduct_location(request.getParameter("product_location"));
+	        p.setProduct_locationurl(request.getParameter("product_locationurl"));
 	        p.setProduct_color(request.getParameter("product_color"));
 	        p.setSeller_number(request.getParameter("seller_number"));
 	        p.setProduct_size(request.getParameter("product_size"));

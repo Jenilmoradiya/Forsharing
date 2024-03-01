@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ShopMax &mdash; Colorlib e-Commerce Template</title>
+    <title>RentIT</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -27,6 +27,13 @@
 
     <link rel="stylesheet" href="css/style.css">
     
+    <style>
+.main-img {
+	width: 100%;
+	height: 550px;
+	object-fit: cover;
+}
+</style>
   </head>
   <body>
   
@@ -36,14 +43,14 @@
 		<div class="carousel-inner">
 			<div class="carousel-item active">
 				<img
-					src="https://source.unsplash.com/random/1900x500/?electonics,tools,cycles,book"
-					alt="">
+					src="images/main12.png"
+					alt="" class="main-img">
 
 				<div class="container">
 					<div class="carousel-caption text-start">
-						<h1>Want to save money?</h1>
+						<h1>Want to earn money?</h1>
 						<a style="font-variant: normal;" class="btn btn-lg btn-primary"
-							href="shop.jsp">Rent.IT Now</a>
+							href="seller-add-product.jsp">Rent On RentIT</a>
 						</p>
 					</div>
 				</div>
@@ -51,56 +58,9 @@
 		</div>
 	</div>
 
-    <div class="site-section">
-		<div class="container">
-			<div class="title-section mb-5">
-				<h2 class="text-uppercase">
-					<span class="d-block">Discover</span> The Collections
-				</h2>
-			</div>
-			<div class="row align-items-stretch">
-				<div class="col-lg-8">
-					<div class="product-item sm-height full-height bg-gray">
-						<a href="Clothes-shop.jsp" class="product-category">Clothes<span>items</span></a>
-						<img src="images/suits.png" alt="Image" class="img-fluid">
-					</div>
-				</div>
-				<div class="col-lg-4">
-					<div class="product-item sm-height bg-gray mb-4">
-						<a href="Electronics-shop.jsp" class="product-category">Electronics<span>25
-								items</span></a> <img src="images/p.png" alt="Image" class="img-fluid">
-					</div>
+		
 
-					<div class="product-item sm-height bg-gray">
-						<a href="Tools-shop.jsp" class="product-category">Tools <span>25
-								items</span></a> <img src="images/d.png" alt="Image" class="img-fluid">
-					</div>
-
-
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-    <div class="site-blocks-cover inner-page py-5" data-aos="fade">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 ml-auto order-md-2 align-self-start">
-            <div class="site-block-cover-content">
-            <h2 class="sub-title">#New Summer Collection 2019</h2>
-            <h1>New Shoes</h1>
-            <p><a href="#" class="btn btn-black rounded-0">Shop Now</a></p>
-            </div>
-          </div>
-          <div class="col-md-6 order-1 align-self-end">
-            <img src="images/model_6.png" alt="Image" class="img-fluid">
-          </div>
-        </div>
-      </div>
-    </div>
-
-   <footer class="site-footer custom-border-top">
+  <footer class="site-footer custom-border-top">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
@@ -119,16 +79,16 @@
 						</div>
 						<div class="col-md-6 col-lg-4">
 							<ul class="list-unstyled">
-								<li><a href="#">Qualities Cloths</a></li>
-								<li><a href="#">Electronics</a></li>
-								<li><a href="#">Tools</a></li>
-								<li><a href="#">Shop more</a></li>
+								<li><a href="Clothes-shop.jsp">Qualities Cloths</a></li>
+								<li><a href="Electronics-shop.jsp">Electronics</a></li>
+								<li><a href="Tools-shop.jsp">Tools</a></li>
+								<li><a href="index.jsp">Shop more</a></li>
 							</ul>
 						</div>
 						<div class="col-md-6 col-lg-4">
 							<ul class="list-unstyled">
-								<li><a href="#">Contact Us</a></li>
-								<li><a href="#">Wishlist</a></li>
+								<li><a href="contact.jsp">Contact Us</a></li>
+								<li><a href="Wishlist-grid.jsp">Wishlist</a></li>
 								<li><a href="#">Social Media</a></li>
 							</ul>
 						</div>
@@ -152,20 +112,17 @@
 			<div class="row pt-5 mt-5 text-center">
 				<div class="col-md-12">
 					<p>
-
 						Copyright &copy;
 						<script>
 								document.write(new Date().getFullYear());
 							</script>
 						All rights reserved
-
 					</p>
 				</div>
-
 			</div>
 		</div>
 	</footer>
-	
+
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-ui.js"></script>
   <script src="js/popper.min.js"></script>

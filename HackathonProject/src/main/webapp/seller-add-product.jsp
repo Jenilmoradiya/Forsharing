@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ShopMax &mdash; Colorlib e-Commerce Template</title>
+    <title>RentIT</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -84,6 +84,19 @@
                   </div>
                 </div>
               
+              <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="c_email" class="text-black">Product Days <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="c_email" name="product_day" placeholder="">
+                  </div>
+                </div>
+                
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="c_email" class="text-black">Product Original price <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="c_email" name="product_originalprice" placeholder="">
+                  </div>
+                </div>
                <div class="form-group row">
                   <div class="col-md-12">
                     <label for="c_email" class="text-black">Product size <span class="text-danger">*</span></label>
@@ -118,6 +131,14 @@
                   <div class="col-md-12">
                     <label for="password" class="text-black">Product location <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="password" name="product_location" placeholder="">
+                  </div>
+                </div>
+                
+                
+               <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="password" class="text-black">Product location url<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="password" name="product_locationurl" placeholder="">
                   </div>
                 </div>
                 

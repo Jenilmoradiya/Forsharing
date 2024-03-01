@@ -58,29 +58,26 @@
 								<li><a href="index.jsp">Home</a></li>
 								<li><a href="shop.jsp">Shop</a></li>
 								<li><a href="#">Recommended</a></li>
+
 								<li><a href="contact.jsp">Contact</a></li>
 							</ul>
 						</nav>
 					</div>
-					<div class="icons">
-						<a href="#" class="icons-btn d-inline-block js-search-open"><span
-							class="icon-search"></span></a> 
 
 
-
-
-
-
-
-						<%
+					<%
 						UserBean u = null;
 						if (session != null) {
 
 							if (session.getAttribute("u") != null) {
 								u = (UserBean) session.getAttribute("u");
 						%>
-						<a href="Wishlist-grid.jsp" class="icons-btn d-inline-block"><span
-							class="icon-heart-o"><%=session.getAttribute("wishlist_count")%></span></a>
+
+
+					<div class="icons">
+						<a href="#" class="icons-btn d-inline-block js-search-open"><span
+							class="icon-search"></span></a> <a href="Wishlist-grid.jsp"
+							class="icons-btn d-inline-block"><span class="icon-heart-o"><%=session.getAttribute("wishlist_count")%></span></a>
 
 						<a style="padding: 10px; margin-left: 20px"
 							href="changePassword.jsp">change password</a> <a
@@ -90,9 +87,10 @@
 						<%
 						} else {
 						%>
-						<a style="padding: 10px; margin-left: 20px" href="signup.jsp">Signup</a>
-						<a href="login.jsp">Login</a>
-
+						<div>
+							<a style="padding: 10px; margin-left: 20px" href="signup.jsp">Signup</a>
+							<a href="login.jsp">Login</a>
+						</div>
 						<%
 						}
 						}

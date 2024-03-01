@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ShopMax &mdash; Colorlib e-Commerce Template</title>
+    <title>RentIT</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -72,7 +72,7 @@
                 </div>
                 <div class="form-group row">
                   <div class="col-lg-12">
-                    <input type="submit" onclick="submit()" class="btn btn-primary btn-lg btn-block" name="action" value="change password">
+                    <input type="submit" class="btn btn-primary btn-lg btn-block" name="action" value="change password">
                   </div>
                 </div>
               </div>

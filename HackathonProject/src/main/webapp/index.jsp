@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>RentIT &mdash; Colorlib e-Commerce Template</title>
+<title>RentIT</title>
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -28,6 +28,14 @@
 
 <link rel="stylesheet" href="css/style.css">
 
+<style>
+.main-img {
+	width: 100%;
+	height: 550px;
+	object-fit: cover;
+}
+</style>
+
 </head>
 <body>
 
@@ -36,9 +44,7 @@
 		<div class="carousel-indicators"></div>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img
-					src="https://source.unsplash.com/random/1900x500/?books"
-					alt="">
+				<img src="images/main12.png" alt="" class="main-img">
 
 				<div class="container">
 					<div class="carousel-caption text-start">
@@ -51,7 +57,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="site-section">
 		<div class="container">
 			<div class="title-section mb-5">
@@ -63,18 +69,18 @@
 				<div class="col-lg-8">
 					<div class="product-item sm-height full-height bg-gray">
 						<a href="Clothes-shop.jsp" class="product-category">Clothes<span>items</span></a>
-						<img src="images/suits.png" alt="Image" class="img-fluid">
+						<img src="images/model_5.png" alt="Image" class="img-fluid">
 					</div>
 				</div>
 				<div class="col-lg-4">
 					<div class="product-item sm-height bg-gray mb-4">
 						<a href="Electronics-shop.jsp" class="product-category">Electronics<span>25
-								items</span></a> <img src="images/p.png" alt="Image" class="img-fluid">
+								items</span></a> <img src="images/Electronic.png" alt="Image" class="img-fluid">
 					</div>
 
 					<div class="product-item sm-height bg-gray">
 						<a href="Tools-shop.jsp" class="product-category">Tools <span>25
-								items</span></a> <img src="images/d.png" alt="Image" class="img-fluid">
+								items</span></a> <img src="images/toolkit.png" alt="Image" class="img-fluid">
 					</div>
 
 
@@ -89,10 +95,11 @@
 			<div class="row">
 				<div class="col-md-6 ml-auto order-md-2 align-self-start">
 					<div class="site-block-cover-content">
-						<h2 class="sub-title">#New Summer Collection 2019</h2>
-						<h1>New Clothes</h1>
+						<h2 class="sub-title">#New Collection RentIT Now</h2>
+						<h1>New Collections</h1>
 						<p>
-							<a href="Clothes-shop.jsp" class="btn btn-black rounded-0">Rent Now</a>
+							<a href="Clothes-shop.jsp" class="btn btn-black rounded-0">Rent
+								Now</a>
 						</p>
 					</div>
 				</div>
@@ -122,16 +129,16 @@
 						</div>
 						<div class="col-md-6 col-lg-4">
 							<ul class="list-unstyled">
-								<li><a href="#">Qualities Cloths</a></li>
-								<li><a href="#">Electronics</a></li>
-								<li><a href="#">Tools</a></li>
-								<li><a href="#">Shop more</a></li>
+								<li><a href="Clothes-shop.jsp">Qualities Cloths</a></li>
+								<li><a href="Electronics-shop.jsp">Electronics</a></li>
+								<li><a href="Tools-shop.jsp">Tools</a></li>
+								<li><a href="index.jsp">Shop more</a></li>
 							</ul>
 						</div>
 						<div class="col-md-6 col-lg-4">
 							<ul class="list-unstyled">
-								<li><a href="#">Contact Us</a></li>
-								<li><a href="#">Wishlist</a></li>
+								<li><a href="contact.jsp">Contact Us</a></li>
+								<li><a href="Wishlist-grid.jsp">Wishlist</a></li>
 								<li><a href="#">Social Media</a></li>
 							</ul>
 						</div>
@@ -155,16 +162,13 @@
 			<div class="row pt-5 mt-5 text-center">
 				<div class="col-md-12">
 					<p>
-
 						Copyright &copy;
 						<script>
 								document.write(new Date().getFullYear());
 							</script>
 						All rights reserved
-
 					</p>
 				</div>
-
 			</div>
 		</div>
 	</footer>

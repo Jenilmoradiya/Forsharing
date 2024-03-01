@@ -3,7 +3,7 @@ package com.bean;
 public class ProductBean {
 
 	private int uid,pid;
-	private String product_price,product_deposit,seller_number,product_category,product_name,product_desc,product_image,product_weight,product_material,product_location,product_color,product_size;
+	private String product_price,product_deposit,seller_number,product_category,product_name,product_desc,product_image,product_weight,product_material,product_location,product_color,product_size,product_day,product_originalprice,product_locationurl;
 	
 	public int getUid() {
 		return uid;
@@ -92,6 +92,24 @@ public class ProductBean {
 	}
 	public void setProduct_color(String product_color) {
 		this.product_color = product_color;
+	}
+	public String getProduct_day() {
+		return product_day;
+	}
+	public void setProduct_day(String product_day) {
+		this.product_day = product_day;
+	}
+	public String getProduct_originalprice() {
+		return product_originalprice;
+	}
+	public void setProduct_originalprice(String product_originalprice) {
+		this.product_originalprice = product_originalprice;
+	}
+	public String getProduct_locationurl() {
+		return product_locationurl;
+	}
+	public void setProduct_locationurl(String product_locationurl) {
+		this.product_locationurl = product_locationurl;
 	}
 	
 	

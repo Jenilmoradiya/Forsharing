@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>ShopMax &mdash; Colorlib e-Commerce Template</title>
+<title>RentIT</title>
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -125,16 +125,16 @@
 						</div>
 						<div class="col-md-6 col-lg-4">
 							<ul class="list-unstyled">
-								<li><a href="#">Qualities Cloths</a></li>
-								<li><a href="#">Electronics</a></li>
-								<li><a href="#">Tools</a></li>
-								<li><a href="#">Shop more</a></li>
+								<li><a href="Clothes-shop.jsp">Qualities Cloths</a></li>
+								<li><a href="Electronics-shop.jsp">Electronics</a></li>
+								<li><a href="Tools-shop.jsp">Tools</a></li>
+								<li><a href="index.jsp">Shop more</a></li>
 							</ul>
 						</div>
 						<div class="col-md-6 col-lg-4">
 							<ul class="list-unstyled">
-								<li><a href="#">Contact Us</a></li>
-								<li><a href="#">Wishlist</a></li>
+								<li><a href="contact.jsp">Contact Us</a></li>
+								<li><a href="Wishlist-grid.jsp">Wishlist</a></li>
 								<li><a href="#">Social Media</a></li>
 							</ul>
 						</div>
@@ -158,16 +158,13 @@
 			<div class="row pt-5 mt-5 text-center">
 				<div class="col-md-12">
 					<p>
-
 						Copyright &copy;
 						<script>
 								document.write(new Date().getFullYear());
 							</script>
 						All rights reserved
-
 					</p>
 				</div>
-
 			</div>
 		</div>
 	</footer>

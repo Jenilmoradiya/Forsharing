@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ShopMax &mdash; Colorlib e-Commerce Template</title>
+    <title>RentIT</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -140,6 +140,20 @@
                     <input type="text" class="form-control" id="c_email" name="product_deposit"  value="<%=p.getProduct_deposit()%>">
                   </div>
                 </div>
+                
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="c_email" class="text-black">Rent days <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="c_email" name="product_day"  value="<%=p.getProduct_day()%>">
+                  </div>
+                </div>
+                
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="c_email" class="text-black">Original price<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="c_email" name="product_originalprice"  value="<%=p.getProduct_originalprice()%>">
+                  </div>
+                </div>
               
                <div class="form-group row">
                   <div class="col-md-12">
@@ -175,6 +189,13 @@
                   <div class="col-md-12">
                     <label for="password" class="text-black">Product location <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="password" name="product_location"  value="<%=p.getProduct_location()%>">
+                  </div>
+                </div>
+                
+                 <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="password" class="text-black">Product location url <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="password" name="product_locationurl"  value="<%=p.getProduct_locationurl()%>">
                   </div>
                 </div>
                 

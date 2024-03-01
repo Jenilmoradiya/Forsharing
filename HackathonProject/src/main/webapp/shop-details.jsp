@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>ShopMax &mdash; Colorlib e-Commerce Template</title>
+<title>RentIT</title>
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -44,7 +44,7 @@
    ProductBean p=ProductDao.productinfo(pid);
   %>
 
-	<div class="container mt-5">
+	 <div class="container mt-5">
 		<div class="card">
 			<div class="card-body">
 				<div class="row">
@@ -61,6 +61,10 @@
 						<p class="card-text">
 							Deposit :<%=p.getProduct_deposit() %></p>
 						<p class="card-text">
+							Days For Rent :<%=p.getProduct_day() %></p>
+							<p class="card-text">
+							Original price :<%=p.getProduct_originalprice() %></p>
+							<p class="card-text">
 							Material :<%=p.getProduct_material() %></p>
 						<p class="card-text">
 							Weight :<%=p.getProduct_weight() %></p>
@@ -70,10 +74,10 @@
 							Size :<%=p.getProduct_size() %></p>
 
 						<p class="card-text">
-							Contact No. :<%=p.getSeller_number() %></p>
+							Contact no.<a href="tel://<%=p.getSeller_number() %>" ><%=p.getSeller_number() %></a></p>
 						<p class="card-text">
 							Location :
-							<%=p.getProduct_location() %></p>
+							<a href="<%=p.getProduct_locationurl() %>" ><%=p.getProduct_location() %></a></p>
 						<p class="card-text">
 							Description :
 							<%=p.getProduct_desc() %></p>
@@ -116,7 +120,7 @@
 			</div>
 		</div>
 	</div>
-
+ 
 	<!-- Bootstrap JS and dependencies (optional) -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script

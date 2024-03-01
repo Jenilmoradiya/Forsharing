@@ -17,7 +17,7 @@ public class ProductDao {
 		try {
 			
 		Connection conn=UserUtil.CreateConnection();
-		String sql="insert into product(uid,product_category,product_name,product_price,product_desc,product_image,product_deposit,product_weight,seller_number,product_material,product_location,product_color,product_size) values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		String sql="insert into product(uid,product_category,product_name,product_price,product_desc,product_image,product_deposit,product_weight,seller_number,product_material,product_location,product_color,product_size,product_day,product_originalprice,product_locationurl) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		PreparedStatement pst=conn.prepareStatement(sql);
 	     	
 		pst.setInt(1, p.getUid());
@@ -33,7 +33,9 @@ public class ProductDao {
 		pst.setString(11, p.getProduct_location());
 		pst.setString(12, p.getProduct_color());
 		pst.setString(13, p.getProduct_size());
-		
+		pst.setString(14, p.getProduct_day());
+		pst.setString(15, p.getProduct_originalprice());
+		pst.setString(16, p.getProduct_locationurl());
 		pst.executeUpdate();
 		} catch (SQLException e) {
 			
@@ -67,11 +69,14 @@ public class ProductDao {
 			    p.setProduct_image(rst.getString("product_image"));
 			    
 			    p.setProduct_deposit(rst.getString("product_deposit"));
+			    p.setProduct_day(rst.getString("product_day"));
+			    p.setProduct_originalprice(rst.getString("product_originalprice"));
 				p.setProduct_weight(rst.getString("product_weight"));
 				p.setSeller_number(rst.getString("seller_number"));
 			    p.setProduct_material(rst.getString("product_material"));
 			    
 			    p.setProduct_location(rst.getString("product_location"));
+			    p.setProduct_locationurl(rst.getString("product_locationurl"));
 				p.setProduct_color(rst.getString("product_color"));
 				p.setProduct_size(rst.getString("product_size"));
 			  
@@ -113,11 +118,14 @@ public class ProductDao {
 			    p.setProduct_image(rst.getString("product_image"));
 			    
 			    p.setProduct_deposit(rst.getString("product_deposit"));
+			    p.setProduct_day(rst.getString("product_day"));
+			    p.setProduct_originalprice(rst.getString("product_originalprice"));
 				p.setProduct_weight(rst.getString("product_weight"));
 				p.setSeller_number(rst.getString("seller_number"));
 			    p.setProduct_material(rst.getString("product_material"));
 			    
 			    p.setProduct_location(rst.getString("product_location"));
+			    p.setProduct_locationurl(rst.getString("product_locationurl"));
 				p.setProduct_color(rst.getString("product_color"));
 				p.setProduct_size(rst.getString("product_size"));
 			}
@@ -134,7 +142,7 @@ public class ProductDao {
 		try {
 			
 			Connection conn=UserUtil.CreateConnection();
-			String sql="update product set product_category=?,product_name=?,product_price=?,product_desc=?,product_deposit=?,product_weight=?,seller_number=?,product_material=?,product_location=?,product_color=?,product_size=? where pid=?";
+			String sql="update product set product_category=?,product_name=?,product_price=?,product_desc=?,product_deposit=?,product_weight=?,seller_number=?,product_material=?,product_location=?,product_color=?,product_size=?,product_day=?,product_originalprice=?,product_locationurl=? where pid=?";
 			PreparedStatement pst=conn.prepareStatement(sql);
 		     	
 			pst.setString(1, p.getProduct_category());
@@ -151,8 +159,12 @@ public class ProductDao {
 			pst.setString(10, p.getProduct_color());
 			pst.setString(11, p.getProduct_size());
 			
-			pst.setInt(12, p.getPid());
-			   
+			
+			pst.setString(12, p.getProduct_day());
+			pst.setString(13, p.getProduct_originalprice());
+			pst.setString(14, p.getProduct_locationurl());
+			
+			pst.setInt(15, p.getPid());
 			pst.executeUpdate();
 			} catch (SQLException e) {
 				
@@ -201,11 +213,14 @@ public static List<ProductBean> ShowonShop(){
 		    p.setProduct_image(rst.getString("product_image"));
 		    
 		    p.setProduct_deposit(rst.getString("product_deposit"));
+		    p.setProduct_day(rst.getString("product_day"));
+		    p.setProduct_originalprice(rst.getString("product_originalprice"));
 			p.setProduct_weight(rst.getString("product_weight"));
 			p.setSeller_number(rst.getString("seller_number"));
 		    p.setProduct_material(rst.getString("product_material"));
 		    
 		    p.setProduct_location(rst.getString("product_location"));
+		    p.setProduct_locationurl(rst.getString("product_locationurl"));
 			p.setProduct_color(rst.getString("product_color"));
 			p.setProduct_size(rst.getString("product_size"));
 		    list.add(p);
@@ -247,11 +262,14 @@ public static List<ProductBean> ShowonShop(){
 		    p.setProduct_image(rst.getString("product_image"));
 		    
 		    p.setProduct_deposit(rst.getString("product_deposit"));
+		    p.setProduct_day(rst.getString("product_day"));
+		    p.setProduct_originalprice(rst.getString("product_originalprice"));
 			p.setProduct_weight(rst.getString("product_weight"));
 			p.setSeller_number(rst.getString("seller_number"));
 		    p.setProduct_material(rst.getString("product_material"));
 		    
 		    p.setProduct_location(rst.getString("product_location"));
+		    p.setProduct_locationurl(rst.getString("product_locationurl"));
 			p.setProduct_color(rst.getString("product_color"));
 			p.setProduct_size(rst.getString("product_size"));
 		    list.add(p);
@@ -291,11 +309,14 @@ public static List<ProductBean> ShowonShop(){
 		    p.setProduct_image(rst.getString("product_image"));
 		    
 		    p.setProduct_deposit(rst.getString("product_deposit"));
+		    p.setProduct_day(rst.getString("product_day"));
+		    p.setProduct_originalprice(rst.getString("product_originalprice"));
 			p.setProduct_weight(rst.getString("product_weight"));
 			p.setSeller_number(rst.getString("seller_number"));
 		    p.setProduct_material(rst.getString("product_material"));
 		    
 		    p.setProduct_location(rst.getString("product_location"));
+		    p.setProduct_locationurl(rst.getString("product_locationurl"));
 			p.setProduct_color(rst.getString("product_color"));
 			p.setProduct_size(rst.getString("product_size"));
 		    list.add(p);
@@ -336,11 +357,14 @@ public static List<ProductBean> ShowonShop(){
 			    p.setProduct_image(rst.getString("product_image"));
 			    
 			    p.setProduct_deposit(rst.getString("product_deposit"));
+			    p.setProduct_day(rst.getString("product_day"));
+			    p.setProduct_originalprice(rst.getString("product_originalprice"));
 				p.setProduct_weight(rst.getString("product_weight"));
 				p.setSeller_number(rst.getString("seller_number"));
 			    p.setProduct_material(rst.getString("product_material"));
 			    
 			    p.setProduct_location(rst.getString("product_location"));
+			    p.setProduct_locationurl(rst.getString("product_locationurl"));
 				p.setProduct_color(rst.getString("product_color"));
 				p.setProduct_size(rst.getString("product_size"));
 			    list.add(p);
